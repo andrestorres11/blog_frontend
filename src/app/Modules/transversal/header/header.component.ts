@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { MatToolbar } from '@angular/material/toolbar';
 
@@ -8,9 +9,13 @@ import { MatToolbar } from '@angular/material/toolbar';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  goTo(route){
+    this.router.navigateByUrl(route);
   }
 
 }
