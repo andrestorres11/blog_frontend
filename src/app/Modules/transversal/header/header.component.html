@@ -1,0 +1,11 @@
+<p>
+    <mat-toolbar>
+        <span color="accent" class="titulo-menu">Blog</span>
+        <button mat-button [matMenuTriggerFor]="menu" mat-raised-button class="titulo-menu" color="accent">Administrador</button>
+        <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="admin/posts">Posts</button>
+        <button mat-menu-item routerLink="admin/authors">Autores</button>
+        </mat-menu>
+        <button routerLink="/public/posts" mat-button mat-raised-button class="titulo-menu" color="accent">Publico</button>
+    </mat-toolbar>
+</p>
