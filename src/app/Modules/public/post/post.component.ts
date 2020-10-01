@@ -28,15 +28,6 @@ export class PostComponent implements OnInit {
     });
   }
 
-  getPost(id): void {
-    this.cargando = true;
-    this.postService.getPost(id)
-    .then((post: PostModel) => {
-      this.openDialog(post);    
-      this.cargando = false;
-    });
-  }
-
   openDialog(post) {
     this.dialog.open(Dialog, {
       data: {
@@ -54,7 +45,7 @@ export class PostComponent implements OnInit {
 })
 export class Dialog {
   constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {
-    console.log("dialog", data);
+    console.log("dialog", data['post']);
   }
 
 }

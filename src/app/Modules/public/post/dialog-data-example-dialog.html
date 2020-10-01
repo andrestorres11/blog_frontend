@@ -1,7 +1,7 @@
-<h1 mat-dialog-title>{{data.post.tittle}}</h1>
-<img mat-card-image src="{{data.post.image}}" alt="sin imagen" class="image">
+<h1 mat-dialog-title>{{data['post'].tittle}}</h1>
+<img mat-card-image src="{{data['post'].image}}" alt="sin imagen" class="image">
 <div mat-dialog-content>
-  <h3>{{data.post.content}}</h3>
+  {{data['post'].content}}
   <br>
-  <h5>{{data.post.authors.name}} {{data.post.authors.last_name}}</h5>
+  {{data['post'].authors.name}} {{data['post'].authors.last_name}}
 </div>
