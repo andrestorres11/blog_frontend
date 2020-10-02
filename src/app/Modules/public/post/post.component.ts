@@ -3,10 +3,6 @@ import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {PostModel} from '../../../Models/post-model';
 import {PostService} from '../../../Services/post.service';
 
-export interface DialogData {
-  animal: 'panda' | 'unicorn' | 'lion';
-}
-
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
@@ -44,7 +40,7 @@ export class PostComponent implements OnInit {
   styleUrls: ['./post.component.css']
 })
 export class Dialog {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data) {
     console.log("dialog", data['post']);
   }
 

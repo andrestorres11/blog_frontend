@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map, delay } from 'rxjs/operators';
 import { environment } from '../../environments/environment.prod';
-import { PostModel } from '../Models/post-model';
 
 @Injectable({
   providedIn: 'root'

@@ -1,0 +1,17 @@
+<form class="example-form" [formGroup]="formGroup">
+  <mat-form-field class="example-full-width">
+    <mat-label>ID</mat-label>
+    <input formControlName="id" matInput disabled="disabled" value="id">
+  </mat-form-field>
+  <p>
+    <mat-form-field class="example-full-width" color="accent">
+      <mat-label>Nombre</mat-label>
+      <input formControlName="name" matInput value="name">
+    </mat-form-field>
+    <mat-form-field class="example-full-width"  color="accent">
+      <mat-label>Apellido</mat-label>
+      <input formControlName="last_name" matInput value="last_name">
+    </mat-form-field>
+  </p>
+  <button mat-raised-button color="accent">Editar</button>
+</form>

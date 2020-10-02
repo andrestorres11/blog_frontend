@@ -8,19 +8,19 @@ import { PostsComponent } from './Modules/admin/posts/posts.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {PublicModule} from './Modules/public/public.module';
 import {TransversalModule} from './Modules/transversal/transversal.module';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
-    AppComponent,
-    AuthorComponent,
-    PostsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     PublicModule,
-    TransversalModule
+    TransversalModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [],
   providers: [],
