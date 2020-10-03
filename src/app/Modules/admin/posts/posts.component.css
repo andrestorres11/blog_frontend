@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 42%;
+}
+
+.tabla{
+    margin-right: 1px;
+    height: 150px;
+    width: 800px;
+}

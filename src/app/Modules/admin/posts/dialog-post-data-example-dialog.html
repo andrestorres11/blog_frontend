@@ -1,0 +1,36 @@
+<form class="example-form" [formGroup]="formGroup">
+  <mat-form-field class="example-full-width">
+    <mat-label>ID</mat-label>
+    <input formControlName="id" matInput disabled="disabled">
+  </mat-form-field>
+  <p>
+    <mat-form-field class="example-full-width" color="accent">
+      <mat-label>Titulo</mat-label>
+      <input formControlName="tittle" matInput >
+    </mat-form-field>
+    <mat-form-field class="example-full-width"  color="accent">
+      <mat-label>contenido</mat-label>
+      <input formControlName="content" matInput>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field class="example-full-width"  color="accent">
+      <mat-label>Autor</mat-label>
+      <input formControlName="author" matInput>
+    </mat-form-field>
+
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option formControlName="author" *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+
+    <mat-form-field>
+      <ngx-mat-file-input formControlName="imageBase64">
+      </ngx-mat-file-input>
+    </mat-form-field>
+  </p>
+  <button mat-raised-button color="accent" (click)="enviar()">
+    <input formControlName="acciones" matInput>
+  </button>
+</form>

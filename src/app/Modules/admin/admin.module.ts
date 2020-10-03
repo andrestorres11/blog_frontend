@@ -9,14 +9,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { TransversalModule } from '../transversal/transversal.module';
 import { AuthorComponent, Dialog } from './author/author.component';
-import { PostsComponent } from '../admin/posts/posts.component';
+import { DialogPost, PostsComponent } from '../admin/posts/posts.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
+import { NgxMatFileInputModule } from '@angular-material-components/file-input';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 @NgModule({
-  declarations: [AuthorComponent, PostsComponent, Dialog],
+  declarations: [AuthorComponent, PostsComponent, Dialog, DialogPost],
   imports: [
     CommonModule,
     AdminRoutingModule,
@@ -30,7 +32,9 @@ import {MatButtonModule} from '@angular/material/button';
 	MatGridListModule,
 	ReactiveFormsModule,
 	FormsModule,
-	MatButtonModule
+	MatButtonModule,
+	NgxMatFileInputModule,
+	MatAutocompleteModule
   ],
   exports:[
     MatTableModule,
@@ -43,7 +47,9 @@ import {MatButtonModule} from '@angular/material/button';
 	MatIconModule,
 	ReactiveFormsModule,
 	FormsModule,
-	MatButtonModule
+	MatButtonModule,
+	NgxMatFileInputModule,
+	MatAutocompleteModule
   ]
 })
 export class AdminModule { }
